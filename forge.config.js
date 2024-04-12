@@ -14,12 +14,8 @@ module.exports = {
                 // The ICO file to use as the icon for the generated Setup.exe
                 setupIcon: 'icon/cvrx-logo.ico',
                 loadingGif: 'icon/loading.gif',
-                setupExe: `CVRX-v${version}-Windows.exe`,
+                setupExe: `cvrx-v${version}-Windows.exe`,
             },
-        },
-        {
-            name: '@electron-forge/maker-zip',
-            platforms: ['darwin', 'linux'],
         },
         {
             name: '@electron-forge/maker-deb',

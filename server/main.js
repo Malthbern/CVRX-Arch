@@ -42,7 +42,7 @@ const CreateWindow = async () => {
         minHeight: 600,
         width: 1280,
         height: 720,
-        icon: './client/img/cvrx-ico.ico',
+        icon: './icon/cvrx-logo.png',
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             devTools: !app.isPackaged,
@@ -81,8 +81,8 @@ const CreateWindow = async () => {
 const BuildTray = async (mainWindow) => {
 
     const trayIcon = app.isPackaged
-        ? path.join(process.resourcesPath, 'app/client/img/cvrx-ico.ico')
-        : './client/img/cvrx-ico.ico';
+        ? path.join(process.resourcesPath, 'app/icon/cvrx-logo.png')
+        : './icon/cvrx-logo.png';
 
     if (!existsSync(trayIcon)) {
         log.error(`Icon file does not exist at path: ${trayIcon}. This WILL crash the app...`);
